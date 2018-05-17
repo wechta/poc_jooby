@@ -22,6 +22,10 @@ public class App extends Jooby {
       }
     }));
 
+    get("/", req -> {
+      return "Welcome to API Gateway POC! \n Swagger documentation: http://localhost:8080/swagger";
+    });
+
     use(new ApiTool().swagger("/swagger"));
 
   }
